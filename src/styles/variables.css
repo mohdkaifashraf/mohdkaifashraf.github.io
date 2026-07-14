@@ -1,0 +1,21 @@
+:root{
+
+    --bg:#0F0F0F;
+    --surface:#181818;
+    --surface-2:#202020;
+
+    --primary:#22C55E;
+    --primary-hover:#16A34A;
+
+    --white:#FFFFFF;
+    --text:#D1D5DB;
+
+    --border:rgba(255,255,255,.08);
+
+    --shadow:0 15px 50px rgba(0,0,0,.35);
+
+    --transition:.35s ease;
+
+    --radius:20px;
+
+}
