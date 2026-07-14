@@ -1,6 +1,7 @@
 import "./Hero.css";
 import profile from "../../assets/images/profile.png";
 import profileData from "../../data/profile";
+import { socialLinks } from "../../data/socialLinks";
 
 function Hero() {
   return (
@@ -44,19 +45,16 @@ function Hero() {
             </div>
 
             <div className="hero-social">
-
-              <a href="#">
-                <i className="bi bi-github"></i>
-              </a>
-
-              <a href="#">
-                <i className="bi bi-linkedin"></i>
-              </a>
-
-              <a href="#">
-                <i className="bi bi-envelope"></i>
-              </a>
-
+              {socialLinks.map((item) => (
+                <a
+                  key={item.id}
+                  href={item.url}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <i className={item.icon}></i>
+                </a>
+              ))}
             </div>
 
           </div>

@@ -11,11 +11,11 @@ const profile = {
   description:
     "Passionate about building scalable web applications using Django, React and Machine Learning.",
 
-  github: "https://github.com/MohdKaif-d",
+  github: "https://github.com/mohdkaifashraf",
 
-  linkedin: "https://linkedin.com/in/YOUR_LINK",
+  linkedin: "https://linkedin.com/in/mohd-kaif-ashraf",
 
-  email: "your@email.com",
+  email: "kaifali200407@gmail.com",
 };
 
 export default profile;

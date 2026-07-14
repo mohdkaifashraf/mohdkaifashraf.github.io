@@ -1,56 +1,80 @@
 import { useEffect, useState } from "react";
 import "./Navbar.css";
 import { navLinks } from "../../../data/navLinks";
-
 function Navbar() {
   const [activeLink, setActiveLink] = useState("#home");
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    const sections = document.querySelectorAll("section[id]");
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 30);
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActiveLink(`#${entry.target.id}`);
-          }
-        });
-      },
-      {
-        threshold: 0.6,
-      }
-    );
+      const sections = document.querySelectorAll<HTMLElement>("section[id]");
 
-    sections.forEach((section) => observer.observe(section));
+      sections.forEach((section) => {
+        const top = section.offsetTop - 120;
+        const height = section.offsetHeight;
 
-    return () => observer.disconnect();
+        if (
+          window.scrollY >= top &&
+          window.scrollY < top + height
+        ) {
+          setActiveLink(`#${section.id}`);
+        }
+      });
+    };
+
+    handleScroll();
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
-    <nav className="custom-navbar">
+    <header className={`navbar-wrapper ${scrolled ? "scrolled" : ""}`}>
+
       <div className="container-custom navbar-container">
+
         <a href="#home" className="logo">
-          MKA
+          MKA<span>.</span>
         </a>
 
-        <ul className="nav-menu">
-      {navLinks.map((link) => (
-        <li key={link.id}>
-          <a
-            href={link.href}
-            className={activeLink === link.href ? "active" : ""}
-          >
-            {link.title}
-          </a>
-        </li>
-      ))}
-    </ul>
+        <nav>
 
-        <a href="#" className="btn-main">
+          <ul className="nav-menu">
+
+            {navLinks.map((item) => (
+
+              <li key={item.id}>
+
+                <a
+                  href={item.href}
+                  className={activeLink === item.href ? "active" : ""}
+                >
+                  {item.title}
+                </a>
+
+              </li>
+
+            ))}
+
+          </ul>
+
+        </nav>
+
+       <a
+          href="/resume/Mohd_Kaif_Resume.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="resume-btn"
+        >
           Resume
         </a>
+
       </div>
-    </nav>
+
+    </header>
   );
 }
 

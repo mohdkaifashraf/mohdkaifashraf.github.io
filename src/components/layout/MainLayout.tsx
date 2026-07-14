@@ -10,7 +10,6 @@ function MainLayout() {
       <Outlet />
 
       <Footer />
-
     </>
   );
 }
