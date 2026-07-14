@@ -34,17 +34,17 @@ function Navbar() {
         </a>
 
         <ul className="nav-menu">
-          {navLinks.map((link) => (
-            <li key={link.id}>
-              <a
-                href={link.href}
-                className={activeLink === link.href ? "active" : ""}
-              >
-                {link.title}
-              </a>
-            </li>
-          ))}
-        </ul>
+      {navLinks.map((link) => (
+        <li key={link.id}>
+          <a
+            href={link.href}
+            className={activeLink === link.href ? "active" : ""}
+          >
+            {link.title}
+          </a>
+        </li>
+      ))}
+    </ul>
 
         <a href="#" className="btn-main">
           Resume
