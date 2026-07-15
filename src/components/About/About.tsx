@@ -58,7 +58,7 @@ function About() {
 
                 <h4>Projects</h4>
 
-                <p>10+</p>
+                <p>5+</p>
 
               </div>
 
@@ -66,7 +66,7 @@ function About() {
 
                 <h4>Technologies</h4>
 
-                <p>Python • Django • React</p>
+                <p>Python • AI/ML • Java • Django </p>
 
               </div>
 

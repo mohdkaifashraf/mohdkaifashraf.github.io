@@ -34,17 +34,17 @@ function Contact() {
 
               <p>
                 <i className="bi bi-envelope"></i>
-                your@email.com
+                kaifali200407@email.com
               </p>
 
               <p>
                 <i className="bi bi-geo-alt"></i>
-                Lucknow, India
+                New Delhi, India
               </p>
 
               <p>
                 <i className="bi bi-telephone"></i>
-                +91 XXXXX XXXXX
+                +91 8887619986
               </p>
 
             </div>
