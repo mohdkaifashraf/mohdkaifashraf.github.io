@@ -64,7 +64,7 @@ function Navbar() {
         </nav>
 
        <a
-          href="\public\Mohd Kaif_Resume.pdf"
+          href="/resume/Mohd%20Kaif_Resume.pdf"
           target="_blank"
           rel="noopener noreferrer"
           className="resume-btn"
