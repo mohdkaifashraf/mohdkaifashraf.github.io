@@ -34,7 +34,7 @@ function Hero() {
 
             <div className="hero-buttons">
 
-              <a href="#" className="btn-main">
+              <a href="\public\Mohd Kaif_Resume.pdf" download="kaif_Resume" className="btn-main">
                 Download Resume
               </a>
 
